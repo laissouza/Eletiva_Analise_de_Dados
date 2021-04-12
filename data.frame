@@ -1,0 +1,19 @@
+# instalando e chamando pacote eeptools
+install.packages("eeptools")
+library("eeptools")
+
+# Vetor com nomes
+nomes <- c("João", "Maria", "Pedro", "Lucas", "Betina", "Vitória", "Livia", "Esteban", "Sérgio", "Caio", "Amanda", "Felipe")
+
+#Vetor com datas
+Datas.nascimento <- as.Date(c("1994-03-21","2020-06-12", "1988-09-15","1990-02-13", "1997-10-21", "1965-12-29", "1995-04-18", "1999-05-15", "1958-08-11", "1993-07-31", "1970-11-29", "2002-05-24"))
+
+# Vetor com idades
+Idades <- round (age_calc( Datas.nascimento, units = 'years' ))
+
+# data.frame
+lista <- data.frame(
+  nome = nomes ,
+  data.nascimento = Datas.nascimento , 
+  idade = Idades
+)
